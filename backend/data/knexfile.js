@@ -34,8 +34,7 @@ module.exports = {
 
   production: {
     client: "pg",
-    connection:
-      "postgres://user:bluZmXX8ZUdtFwcDdrxTlHoiWCPD643A@dpg-chs4vhorddl7at8ori0g-a/pokemonsearch_xd5u",
+    connection: process.env.DATABASE_URL,
 
     pool: {
       min: 2,
