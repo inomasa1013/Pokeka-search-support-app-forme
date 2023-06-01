@@ -10,9 +10,9 @@
     "makeSeed": "knex seed:make",
     "test": "cross-env NODE_ENV=test mocha -r dotenv/config ./tests/* --exit --reporter nyan tests",
     "makeMigration": "knex migrate:make --knexfile data/knexfile.js",
-    "migrate": "knex migrate:latest --knexfile index.js",
+    "migrate": "knex migrate:latest --knexfile data/index.js",
     "rollback": "knex migrate:rollback --knexfile data/knexfile.js ",
-    "seed": "knex seed:run --knexfile index.js"
+    "seed": "knex seed:run --knexfile data/index.js"
   },
   "husky": {
     "pre-commit": "pretty-quick --staged"
