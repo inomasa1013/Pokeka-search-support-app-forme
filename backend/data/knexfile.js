@@ -15,7 +15,7 @@ module.exports = {
     },
     migrations: {
       directory: "./migrations",
-      tableName: "knex_migrations",
+      tableName: "pokemon",
     },
   },
 
@@ -43,7 +43,7 @@ module.exports = {
     },
     migrations: {
       directory: "./migrations",
-      tableName: "knex_migrations",
+      tableName: "pokemon",
     },
   },
 };
