@@ -3,16 +3,6 @@ const app = express();
 const cors = require("cors");
 const knex = require("index.js");
 
-const knex = require("knex")({
-  client: "pg",
-  connection: {
-    host: "127.0.0.1",
-    user: "user",
-    password: "user",
-    database: "pokemonsearch",
-  },
-});
-
 // CORS設定
 app.use(cors());
 const port = Number(!!process.env.PORT) || 3000;
