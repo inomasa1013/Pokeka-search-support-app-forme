@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+const knex = require("index.js");
 
 const knex = require("knex")({
   client: "pg",
