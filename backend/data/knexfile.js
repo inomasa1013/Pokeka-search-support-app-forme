@@ -19,26 +19,24 @@ module.exports = {
     },
   },
 
-  staging: {
-    client: "pg",
-    connection: DATABASE_URL,
-    pool: {
-      min: 2,
-      max: 10,
-    },
-    migrations: {
-      directory: "./migrations",
-      tableName: "knex_migrations",
-    },
-  },
+  // staging: {
+  //   client: "pg",
+  //   connection: DATABASE_URL,
+  //   pool: {
+  //     min: 2,
+  //     max: 10,
+  //   },
+  //   migrations: {
+  //     directory: "./migrations",
+  //     tableName: "knex_migrations",
+  //   },
+  // },
 
   production: {
     client: "pg",
-    connection: {
-      database: "pokemonsearch",
-      user: "user",
-      password: "user",
-    },
+    connection:
+      "postgres://user:bluZmXX8ZUdtFwcDdrxTlHoiWCPD643A@dpg-chs4vhorddl7at8ori0g-a/pokemonsearch_xd5u",
+
     pool: {
       min: 2,
       max: 10,
