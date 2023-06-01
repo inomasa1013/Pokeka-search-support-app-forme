@@ -34,9 +34,12 @@ module.exports = {
 
   production: {
     client: "pg",
-    connection:
-      "postgres://user:bluZmXX8ZUdtFwcDdrxTlHoiWCPD643A@dpg-chs4vhorddl7at8ori0g-a/pokemonsearch_xd5u",
-
+    connection: {
+      url: "postgres://user:bluZmXX8ZUdtFwcDdrxTlHoiWCPD643A@dpg-chs4vhorddl7at8ori0g-a/pokemonsearch_xd5u",
+      database: "pokemonsearch",
+      user: "user",
+      password: "user",
+    },
     pool: {
       min: 2,
       max: 10,
