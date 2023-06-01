@@ -1,0 +1,41 @@
+{
+  "name": "pssa",
+  "version": "1.0.0",
+  "description": "",
+  "repository": "git@github.com:kidayuichi/Pokeka-search-support-app.git",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./src/server.js",
+    "makeSeed": "knex seed:make",
+    "test": "cross-env NODE_ENV=test mocha -r dotenv/config ./tests/* --exit --reporter nyan tests",
+    "makeMigration": "knex migrate:make --knexfile data/knexfile.js",
+    "migrate": "knex migrate:latest --knexfile data/knexfile.js",
+    "rollback": "knex migrate:rollback --knexfile data/knexfile.js ",
+    "seed": "knex seed:run --knexfile data/knexfile.js"
+  },
+  "husky": {
+    "pre-commit": "pretty-quick --staged"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.6",
+    "express": "^4.18.2",
+    "knex": "^1.0.3",
+    "nodemon": "^2.0.22",
+    "pg": "^8.7.3",
+    "underscore": "^1.9.1",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "eslint": "^6.1.0",
+    "husky": "^3.0.1",
+    "mocha": "^6.2.0",
+    "nodemon": "^1.19.1"
+  }
+}
