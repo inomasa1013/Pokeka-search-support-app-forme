@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const knex = require("./index.js");
+const knex = require("./data/index.js");
 
 // CORS設定
 app.use(cors());
