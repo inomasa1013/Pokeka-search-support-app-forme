@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const knex = require("index.js");
+const knex = require("./index.js");
 
 // CORS設定
 app.use(cors());
@@ -92,6 +92,7 @@ app.get("/api/poke", async (req, res) => {
   // }
 });
 
-app.listen(PORT, () => {
-  console.log(`I am now waiting for incoming HTTP traffic on port ${PORT}!`);
+app.listen(port, () => {
+  console.log(knex);
+  console.log(`I am now waiting for incoming HTTP traffic on port ${port}!`);
 });
