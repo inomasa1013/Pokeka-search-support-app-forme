@@ -6,7 +6,7 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "start": "node ./bin/www.js",
+    "start": "node ./server/bin/www.js",
     "makeSeed": "knex seed:make",
     "test": "cross-env NODE_ENV=test mocha -r dotenv/config ./tests/* --exit --reporter nyan tests",
     "makeMigration": "knex migrate:make --knexfile data/knexfile.js",
