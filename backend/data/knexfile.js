@@ -13,6 +13,9 @@ module.exports = {
       user: process.env.DB_USERNAME || "user",
       password: process.env.DB_PASSWORD || "user",
     },
+    ssl: {
+      rejectUnauthorized: false,
+    },
     migrations: {
       directory: "./migrations",
       tableName: "pokemon",
