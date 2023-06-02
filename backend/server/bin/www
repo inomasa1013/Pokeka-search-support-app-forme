@@ -178,6 +178,6 @@ function onListening() {
   var addr = server.address();
   var bind = typeof addr === "string" ? "pipe " + addr : "port " + addr.port;
   console.log(process.env.DATABASE_URL, process.env.PORT);
-  console.log(knexfile, "//", knexfileDev);
+
   debug("Listening on " + bind);
 }
