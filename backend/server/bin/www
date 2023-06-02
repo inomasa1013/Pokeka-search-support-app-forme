@@ -4,7 +4,7 @@ const App = express();
 const cors = require("cors");
 const knexfile = require("../../data/index.js");
 const knexfileDev = require("../../data/knexfile.js");
-const knex = require("knex")(knexfile);
+const knex = require("knex")(knexfileDev);
 
 App.use("/", express.static("public"));
 // CORS設定
