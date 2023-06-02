@@ -181,7 +181,7 @@ function onListening() {
   knex
     .select("*")
     .from("pokemon")
-    .limit(100)
+    .limit(5)
     .then((data) => console.log(data));
   debug("Listening on " + bind);
 }
