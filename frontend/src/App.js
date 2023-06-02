@@ -16,7 +16,7 @@ function App() {
 
   // useEffect(() => { }, []);
   console.log(damage);
-
+  console.log(process.env.DATABASE_URL, "//", process.env);
   console.log(resultNum);
   return (
     <>
