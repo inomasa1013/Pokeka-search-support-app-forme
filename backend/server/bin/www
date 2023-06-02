@@ -1,12 +1,15 @@
 #!/usr/bin/env node
 const express = require("express");
-const app = express();
+const App = express();
 const cors = require("cors");
 const knexfile = require("./data/index.js");
 const knex = require("knex")(knexfile);
 
+App.use("/", express.static("public"));
+// CORS設定
+App.use(cors());
 //----------------------------------------------
-app.get("/api/poke", async (req, res) => {
+App.get("/api/poke", async (req, res) => {
   // if (req.query === null) {
   // knexでオブジェクトを作る----------
   const AllPokemon = () => {
@@ -91,9 +94,6 @@ app.get("/api/poke", async (req, res) => {
 
 //----------------------------------------------
 
-app.use("/", express.static("public"));
-// CORS設定
-app.use(cors());
 /**
  * Module dependencies.
  */
