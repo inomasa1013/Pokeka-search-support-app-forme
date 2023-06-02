@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/button.css";
 // import _ from "lodash";
-
+console.log(process.env.DATABASE_URL, "//", process.env);
 export default function Button(props) {
   const getAllPoke = async () => {
     let result = [];

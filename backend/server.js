@@ -6,7 +6,7 @@ const knex = require("knex")(knexfile);
 
 // CORS設定
 app.use(cors());
-const port = Number(process.env.PORT + 1) || 8080;
+const port = Number(process.env.PORT) + 1 || 8080;
 
 app.use("/", express.static("public"));
 
