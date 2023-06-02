@@ -7,9 +7,7 @@ export default function Button(props) {
     let result = [];
     console.log("ボタン押されたよ");
 
-    const pokeArray = await fetch(
-      process.env.DATABASE_URL || "http://localhost:8080/api/poke"
-    ); //.then((e) =>
+    const pokeArray = await fetch("/api/poke"); //.then((e) =>
     result = await pokeArray.json();
     props.resultNumSet(result);
   };
