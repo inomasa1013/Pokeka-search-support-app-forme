@@ -6,7 +6,7 @@ const knex = require("knex")(knexfile);
 
 // CORS設定
 app.use(cors());
-const port = Number(!!process.env.PORT) || 3000;
+const port = Number(!!process.env.PORT) || 8080;
 
 app.use("/", express.static("public"));
 
@@ -20,8 +20,7 @@ app.get("/api/poke", async (req, res) => {
   const AllpokemonObj = await AllPokemon();
   // console.log(AllpokemonObj);
   // knexでオブジェクトを作る(end)-----
-  res.status(200).send("abcsd");
-  // res.status(200).json(AllpokemonObj);
+  res.status(200).json(AllpokemonObj);
   // } else if (
   //   req.query.damege !== undefined &&
   //   req.query.terms !== undefined &&

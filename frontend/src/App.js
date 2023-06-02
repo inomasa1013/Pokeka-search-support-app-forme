@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 import React, { useEffect, useState } from "react";
 import Damage from "./components/Damage"; //ダメージを記入する欄
 import Energy from "./components/Energy"; //消費エネルギー数を指定する欄
@@ -16,6 +16,7 @@ function App() {
 
   // useEffect(() => { }, []);
   console.log(damage);
+
   console.log(resultNum);
   return (
     <>
@@ -41,7 +42,7 @@ function App() {
       <Result
         resultNum={resultNum}
         resultNumSet={resultNumSet}
-      // ??????
+        // ??????
       />
     </>
   );

@@ -6,8 +6,9 @@ export default function Button(props) {
   const getAllPoke = async () => {
     let result = [];
     console.log("ボタン押されたよ");
+
     const pokeArray = await fetch(
-      "postgres://user:bluZmXX8ZUdtFwcDdrxTlHoiWCPD643A@dpg-chs4vhorddl7at8ori0g-a/pokemonsearch_xd5u"
+      process.env.DATABASE_URL || "http://localhost:8080/api/poke"
     ); //.then((e) =>
     result = await pokeArray.json();
     props.resultNumSet(result);
