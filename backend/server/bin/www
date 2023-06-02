@@ -3,6 +3,7 @@ const express = require("express");
 const App = express();
 const cors = require("cors");
 const knexfile = require("../../data/index.js");
+const knexfileDev = require("../../data/knexfile.js");
 const knex = require("knex")(knexfile);
 
 App.use("/", express.static("public"));
@@ -177,5 +178,6 @@ function onListening() {
   var addr = server.address();
   var bind = typeof addr === "string" ? "pipe " + addr : "port " + addr.port;
   console.log(process.env.DATABASE_URL, process.env.PORT);
+  console.log(knexfile, "//", knexfileDev);
   debug("Listening on " + bind);
 }
