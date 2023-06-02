@@ -94,7 +94,7 @@ app.get("/api/poke", async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(process.env);
-  console.log(knex.select("*").from("pokemon").limit(100));
+  console.log(process.env.PORT);
+
   console.log(`I am now waiting for incoming HTTP traffic on port ${port}!`);
 });
