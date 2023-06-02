@@ -1,7 +1,8 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const knex = require("./data/index.js");
+const knexfile = require("./data/index.js");
+const knex = require("knex")(knexfile);
 
 // CORS設定
 app.use(cors());
@@ -19,7 +20,8 @@ app.get("/api/poke", async (req, res) => {
   const AllpokemonObj = await AllPokemon();
   // console.log(AllpokemonObj);
   // knexでオブジェクトを作る(end)-----
-  res.status(200).json(AllpokemonObj);
+  res.status(200).send("abcsd");
+  // res.status(200).json(AllpokemonObj);
   // } else if (
   //   req.query.damege !== undefined &&
   //   req.query.terms !== undefined &&
@@ -93,6 +95,7 @@ app.get("/api/poke", async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(knex);
+  console.log(process.env);
+  console.log(knex.select("*").from("pokemon").limit(100));
   console.log(`I am now waiting for incoming HTTP traffic on port ${port}!`);
 });
