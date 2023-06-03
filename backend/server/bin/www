@@ -185,5 +185,8 @@ function onListening() {
     .from("pokemon")
     .limit(5)
     .then((data) => console.log(data));
+  knex("pokemon")
+    .columnInfo()
+    .then((data) => console.log(data));
   debug("Listening on " + bind);
 }
