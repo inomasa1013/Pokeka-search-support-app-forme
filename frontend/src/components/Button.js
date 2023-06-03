@@ -7,9 +7,7 @@ export default function Button(props) {
     let result = [];
     console.log("ボタン押された");
 
-    const pokeArray = await fetch(
-      "https://sample-pokemon.onrender.com/api/poke"
-    ); //.then((e) =>
+    const pokeArray = await fetch("/api/poke"); //.then((e) =>
     result = await pokeArray.json();
     props.resultNumSet(result);
   };
