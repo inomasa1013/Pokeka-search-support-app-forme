@@ -10,7 +10,7 @@ App.use("/", express.static("public"));
 // CORS設定
 App.use(cors());
 //----------------------------------------------
-App.get("/api/poke", async (req, res) => {
+App.get("https://sample-pokemon.onrender.com/api/poke", async (req, res) => {
   // if (req.query === null) {
   // knexでオブジェクトを作る----------
   const AllPokemon = () => {

@@ -3,7 +3,6 @@
  * @returns { Promise<void> }
  */
 exports.up = function (knex) {
-  console.log(knex);
   return knex.schema.dropTable("pokemon");
 };
 
