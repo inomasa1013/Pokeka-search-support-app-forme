@@ -1,5 +1,4 @@
 const path = require("path");
-const cors = require("cors");
 const knexfile = require("../../data/index.js");
 const knex = require("knex")(knexfile);
 let express = require("express");
@@ -7,8 +6,9 @@ let router = express.Router();
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
-  res.sendFile(__dirname + "../public/build/index.html");
+  res.sendFile(path.join(__dirname, "../public/build/index.html"));
 });
+
 router.get("/api/poke", async (req, res) => {
   // if (req.query === null) {
   // knexでオブジェクトを作る----------

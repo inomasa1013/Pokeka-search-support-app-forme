@@ -15,9 +15,9 @@ function App() {
   const [resultNum, resultNumSet] = useState(""); //検索件数を出力
 
   // useEffect(() => { }, []);
-  console.log(damage);
-  console.log(process.env.DATABASE_URL, "//", process.env);
-  console.log(resultNum);
+  // console.log(damage);
+  // console.log(process.env.DATABASE_URL, "//", process.env);
+  // console.log(resultNum, "localyou");
   return (
     <>
       <Damage damage={damage} damageSet={damageSet} />
@@ -39,11 +39,11 @@ function App() {
         resultNumSet={resultNumSet}
       />
 
-      <Result
+      {/* <Result
         resultNum={resultNum}
         resultNumSet={resultNumSet}
         // ??????
-      />
+      /> */}
     </>
   );
 }

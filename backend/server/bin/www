@@ -9,6 +9,7 @@ const App = express();
 App.use("/", express.static(__dirname + "../public/build"));
 // CORS設定
 App.use(cors());
+
 //----------------------------------------------
 
 //----------------------------------------------
